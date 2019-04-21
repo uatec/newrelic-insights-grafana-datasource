@@ -1,0 +1,26 @@
+<query-editor-row query-ctrl="ctrl">
+  <!-- Application -->
+  <div class="gf-form-inline">
+    <div class="gf-form gf-form--grow">
+      <label class="gf-form-label query-keyword max-width-9">
+        New Relic Insight
+      </label>
+
+      <div class="gf-form gf-form--grow">
+          <label class="gf-form-label query-keyword">Query</label>
+          <input type="text" class="gf-form-input ng-pristine ng-valid ng-empty ng-touched" ng-model="ctrl.target.query" spellcheck="false" placeholder="NRQL Query" ng-blur="ctrl.refresh()">
+      </div>
+
+      <div class="gf-form gf-form--grow max-width-20">
+          <label class="gf-form-label query-keyword">Alias</label>
+          <input type="text" class="gf-form-input ng-pristine ng-valid ng-empty ng-touched" ng-model="ctrl.target.alias" spellcheck="false" ng-blur="ctrl.refresh()">
+      </div>
+
+      <div class="gf-form gf-form--grow max-width-20">
+        <label class="gf-form-label query-keyword">Offset</label>
+        <input type="number" class="gf-form-input ng-pristine ng-valid ng-empty ng-touched" ng-model="ctrl.target.offset" spellcheck="false" ng-blur="ctrl.refresh()">
+      </div>
+    </div>  
+  </div>
+</query-editor-row>
+  

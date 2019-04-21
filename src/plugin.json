@@ -1,0 +1,18 @@
+{
+    "name": "--- New Relic Insights",
+    "id": "newrelic-insights-plugin",
+    "type": "datasource",
+
+    "metrics": true,
+    "routes": [
+        {
+            "path": "insights_api",
+            "method": "GET",
+            "url": "https://insights-api.newrelic.com/v1/accounts/{{.SecureJsonData.account_no}}/",
+            "headers": [
+                { "name": "X-Query-Key", "content": "{{.SecureJsonData.api_key}}"},
+                { "name": "Accept", "content": "application/json" }
+            ]
+        }
+    ]
+}
